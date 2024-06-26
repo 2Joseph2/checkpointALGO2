@@ -1,0 +1,19 @@
+//THE INSERTION SORT PROCEDURE
+PROCEDURE sorting(arr: ARRAY)
+VAR
+    i:INTEGER
+    j:INTEGER
+    k:INTEGER
+BEGIN
+    FOR i FROM 2 TO LENGTH(arr) STEP step  DO
+        j:=i-1
+        k:=arr[i]
+         WHILE j > 0 AND arr[j] > k DO
+            arr[j + 1] := arr[j]
+            j := j - 1
+        END WHILE
+        
+        arr[j + 1] := k
+
+    END_FOR
+END
